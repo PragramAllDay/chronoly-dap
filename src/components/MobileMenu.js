@@ -6,6 +6,7 @@ import { useContext, useEffect } from "react";
 import { ethers } from "ethers";
 import CONFIG from "./../abi/config";
 import logo from "./../assets/logo.png";
+import "./mobileMenue.css";
 
 const providerOptions = {
   network: "rinkeby",
@@ -113,7 +114,7 @@ const MobileMenu = ({
           </li> */}
           <li className="">
             <a
-              className="px-6 py-3 truncate bg-white text-black uppercase font-medium transition ease-in-out duration-300 hover:border-[#FE4C2F] hover:bg-[#FE4C2F] hover:text-white"
+              className=" truncate  text-white uppercase font-medium transition ease-in-out duration-300 hover:text-white"
               href="/"
             >
               BUY CRNO
@@ -122,11 +123,16 @@ const MobileMenu = ({
           <li className="">
             {account ? (
               <button
-                className="py-2 px-6 ml-4 bg-white text-black truncate uppercase font-medium group transition ease-in-out duration-300 hover:border-[#FE4C2F] hover:bg-[#FE4C2F] hover:text-white flex items-center justify-center space-x-2"
+                className="py-2 px-6 ml-4  text-white truncate uppercase font-medium group transition ease-in-out duration-300 hover:border-[#FE4C2F] hover:bg-[#FE4C2F] hover:text-white flex items-center justify-center space-x-2 rounded-3xl font-bold"
                 onClick={() => disconnectWallet()}
+                style={{
+                  background: "rgb(228,98,80)",
+                  background:
+                    "linear-gradient(90deg, rgba(228,98,80,1) 0%, rgba(255,67,35,1) 100%)",
+                }}
               >
                 <svg
-                  className="w-8 fill-black transition ease-in-out duration-300 group-hover:fill-white"
+                  className="w-8 fill-white transition ease-in-out duration-300 group-hover:fill-white"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
                 >
@@ -138,11 +144,16 @@ const MobileMenu = ({
               </button>
             ) : (
               <button
-                className="py-2 px-6 ml-4 bg-white text-black truncate uppercase font-medium group transition ease-in-out duration-300 hover:border-[#FE4C2F] hover:bg-[#FE4C2F] hover:text-white flex items-center justify-center space-x-2"
+                className="py-2 px-6 ml-4  text-white truncate uppercase font-medium group transition ease-in-out duration-300 hover:border-[#FE4C2F] hover:bg-[#FE4C2F] hover:text-white flex items-center justify-center space-x-2 rounded-3xl font-bold"
                 onClick={() => handleWalletConnect()}
+                style={{
+                  background: "rgb(228,98,80)",
+                  background:
+                    "linear-gradient(90deg, rgba(228,98,80,1) 0%, rgba(255,67,35,1) 100%)",
+                }}
               >
                 <svg
-                  className="w-8 fill-black transition ease-in-out duration-300 group-hover:fill-white"
+                  className="w-8 fill-white transition ease-in-out duration-300 group-hover:fill-white"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
                 >

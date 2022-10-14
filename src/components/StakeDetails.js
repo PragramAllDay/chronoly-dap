@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../context/GlobalContext";
+import "./stakeDetails.css";
 
 const StakeDetails = ({ plan, plans, setPlan }) => {
   const { blockChainData } = useContext(GlobalContext);
@@ -13,6 +14,7 @@ const StakeDetails = ({ plan, plans, setPlan }) => {
     blockChainData.apy.six_month_apy,
     blockChainData.apy.nine_month_apy,
     blockChainData.apy.one_year_apy,
+    blockChainData.apy.hundred_years_apy,
   ]);
 
   return (
@@ -51,7 +53,7 @@ const StakeDetails = ({ plan, plans, setPlan }) => {
       <div className="p-6 pt-1 flex items-center justify-center space-x-2 md:space-x-8 text-black">
         <button
           className={classNames(
-            "uppercase min-w-[90px] bg-white font-bold truncate text-sm px-4 py-2 transition ease-in-out duration-300 hover:bg-[#FE4C2F] hover:text-white",
+            "uppercase min-w-[90px] bg-white font-bold truncate text-sm px-3 py-2 transition ease-in-out duration-300 hover:bg-[#FE4C2F] hover:text-white",
             { "bg-[#FE4C2F] text-white": plan.plan === 3 }
           )}
           onClick={() => setPlan(plans[3])}
@@ -61,12 +63,21 @@ const StakeDetails = ({ plan, plans, setPlan }) => {
 
         <button
           className={classNames(
-            "uppercase min-w-[90px] bg-white font-bold truncate text-sm px-4 py-2 transition ease-in-out duration-300 hover:bg-[#FE4C2F] hover:text-white",
+            "uppercase min-w-[90px] bg-white font-bold truncate text-sm px-3 py-2 transition ease-in-out duration-300 hover:bg-[#FE4C2F] hover:text-white",
             { "bg-[#FE4C2F] text-white": plan.plan === 4 }
           )}
           onClick={() => setPlan(plans[4])}
         >
           12 Months
+        </button>
+        <button
+          className={classNames(
+            "uppercase min-w-[90px] bg-white font-bold  truncate text-sm px-[18px] py-2 transition ease-in-out duration-300 hover:bg-[#FE4C2F] hover:text-white",
+            { "bg-[#FE4C2F] text-white": plan.plan === 5 }
+          )}
+          onClick={() => setPlan(plans[5])}
+        >
+          100 years
         </button>
       </div>
       <div className="mt-4 flex items-start justify-between">

@@ -39,6 +39,11 @@ const Main = ({ setError, setErrMsg }) => {
       duration: "1 Years",
       apy: blockChainData.apy.one_year_apy,
     },
+    {
+      plan: 5,
+      duration: "100 Years",
+      apy: blockChainData.apy.hundred_years_apy,
+    },
   ];
   const [plan, setPlan] = useState(plans[0]);
 
@@ -51,9 +56,9 @@ const Main = ({ setError, setErrMsg }) => {
               className="uppercase font-semibold text-md font-Poppins text-left"
               style={{ textShadow: "0 0 0.17em #fff, 0 0 1.1em #fff" }}
             >
-              Participate CRNO Stake
+              Participate METTA Stake
             </h3>
-            <h2 className="font-extrabold text-2xl ml-3 text-left text-[#FF4D2F]">
+            <h2 className="font-extrabold text-2xl ml-3 text-left text-[#FA7640]">
               {blockChainData.StakedBalance
                 ? parseFloat(blockChainData.StakedBalance) +
                   parseFloat(blockChainData.StakedBalance1) +
@@ -194,7 +199,7 @@ const Main = ({ setError, setErrMsg }) => {
           </h3>
           <div className="flex flex-col md:flex-row items-center justify-between mt-4 md:space-x-10 truncate">
             <div className="bg-slate-200 bg-opacity-5 px-6 py-4 w-full rounded-lg mb-6 md:mb-0">
-              <h2 className="text-xl text-center font-bold mb-4 uppercase border-b pb-2 border-white border-opacity-20 text-[#FF4D2F]">
+              <h2 className="text-xl text-center font-bold mb-4 uppercase border-b-[3px] pb-2 border-[#FF4D2F] border-opacity-20 text-[#FF4D2F]">
                 1 Month
               </h2>
               <p className="text-sm">
@@ -213,7 +218,7 @@ const Main = ({ setError, setErrMsg }) => {
               </p>
             </div>
             <div className="bg-slate-200 bg-opacity-5 px-6 py-4 w-full rounded-lg mb-6 md:mb-0">
-              <h2 className="text-xl text-center font-bold mb-4 uppercase border-b pb-2 border-white border-opacity-20 text-[#FF4D2F]">
+              <h2 className="text-xl text-center font-bold mb-4 uppercase border-b-[3px] pb-2 border-[#FF4D2F] border-opacity-20 text-[#FF4D2F]">
                 3 Months
               </h2>
               <p className="text-sm">
@@ -232,7 +237,7 @@ const Main = ({ setError, setErrMsg }) => {
               </p>
             </div>
             <div className="bg-slate-200 bg-opacity-5 px-6 py-4 w-full rounded-lg mb-6 md:mb-0">
-              <h2 className="text-xl text-center font-bold mb-4 uppercase border-b pb-2 border-white border-opacity-20 text-[#FF4D2F]">
+              <h2 className="text-xl text-center font-bold mb-4 uppercase border-b-[3px] pb-2 border-[#FF4D2F] border-opacity-20 text-[#FF4D2F]">
                 6 Months
               </h2>
               <p className="text-sm">
@@ -254,7 +259,7 @@ const Main = ({ setError, setErrMsg }) => {
 
           <div className="flex flex-col md:flex-row items-center justify-between mt-4 md:space-x-10 truncate">
             <div className="bg-slate-200 bg-opacity-5 px-6 py-4 w-full rounded-lg mb-6 md:mb-0">
-              <h2 className="text-xl text-center font-bold mb-4 uppercase border-b pb-2 border-white border-opacity-20 text-[#FF4D2F]">
+              <h2 className="text-xl text-center font-bold mb-4 uppercase border-b-[3px] pb-2 border-[#FF4D2F] border-opacity-20 text-[#FF4D2F]">
                 9 Months
               </h2>
               <p className="text-sm">
@@ -273,7 +278,7 @@ const Main = ({ setError, setErrMsg }) => {
               </p>
             </div>
             <div className="bg-slate-200 bg-opacity-5 px-6 py-4 w-full rounded-lg mb-6 md:mb-0">
-              <h2 className="text-xl text-center font-bold mb-4 uppercase border-b pb-2 border-white border-opacity-20 text-[#FF4D2F]">
+              <h2 className="text-xl text-center font-bold mb-4 uppercase border-b-[3px] pb-2 border-[#FF4D2F] border-opacity-20 text-[#FF4D2F]">
                 12 Months
               </h2>
               <p className="text-sm">
